@@ -6,12 +6,28 @@
     tools:context="${relativePackage}.${activityClass}" >
 
     <LinearLayout 
-        android:id="@id/date_choice_line"
+        android:id="@+id/date_choice_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FF00FF"
         android:orientation="horizontal">
         
-        <Button />
+        <Button
+            android:id="@+id/date_choice_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FF00FF"
+            android:text="起始日期"
+            />
+        <Button
+            android:id="@+id/date_choice_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FF00FF"
+            android:text="结束日期"
+            />
     </LinearLayout>
 
 </LinearLayout>
