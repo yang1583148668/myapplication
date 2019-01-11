@@ -5,6 +5,7 @@ import android.R.integer;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 
 import java.util.Calendar;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.view.View.OnClickListener;
 import android.view.View;
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -25,6 +27,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	private int mCurrentChoice;
 	private Button StartButton;
 	private Button EndButton;
+	private ImageButton addRecordItemButton;
+	
 
 
     @Override
@@ -33,9 +37,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         StartButton= (Button)findViewById(R.id.date_choice_start);
         EndButton= (Button)findViewById(R.id.date_choice_end);
+        addRecordItemButton = (ImageButton)findViewById(R.id.add_record_item);
+        addRecordItemButton.setOnClickListener(this);
         getDefaultStartAndEnd();
         StartButton.setText(getStartDay());
         EndButton.setText(getEndDay());
+        //mitemStrings=getResources().getStringArray(R.array.paying_type); 
         StartButton.setOnClickListener(this);
         EndButton.setOnClickListener(this);
         
@@ -77,6 +84,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		case R.id.date_choice_end:
 			mCurrentChoice=DATE_CHOICE_DIALOG_END;
 			showDialog(DATE_CHOICE_DIALOG_END);
+			break;
+		case R.id.add_record_item:
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, AddRecordItemActivity.class);
+			startActivity(intent);
 			break;
 		default:
 			break;

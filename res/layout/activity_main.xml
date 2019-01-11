@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,5 +29,101 @@
             android:text="结束日期"
             />
     </LinearLayout>
+	
+    <LinearLayout
+        android:id="@+id/cash_out_line"
+        android:layout_below="@+id/date_choice_line" 
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/cash_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="总支出"/>
+        <TextView
+            android:id="@+id/cash_out_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/cash_in_line"
+        android:layout_below="@+id/cash_out_line" 
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/cash_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="总支出"/>
+        <TextView
+            android:id="@+id/cash_in_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/food_line"
+        android:layout_below="@+id/cash_in_line" 
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/food"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="餐饮"/>
+        <TextView
+            android:id="@+id/food_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/shopping_line"
+        android:layout_below="@+id/food_line" 
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/shopping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="餐饮"/>
+        <TextView
+            android:id="@+id/shopping_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"/>
+    </LinearLayout>
+    
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom ="true" >
+        
+        <ImageButton 
+            android:id="@+id/add_record_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_item"/>
+    </RelativeLayout>
+    
 
-</LinearLayout>
+</RelativeLayout>

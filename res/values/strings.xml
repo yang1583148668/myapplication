@@ -3,5 +3,13 @@
 
     <string name="app_name">myapplication</string>
     <string name="hello_world">Hello world!</string>
+    
+    <string-array name="paying_type">
+        <item>饮食</item>       
+        <item>购物</item>       
+        <item>通讯</item>       
+        <item>娱乐</item>       
+        <item>旅游</item>       
+    </string-array>
 
 </resources>
